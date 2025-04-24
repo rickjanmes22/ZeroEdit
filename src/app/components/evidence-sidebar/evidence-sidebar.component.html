@@ -1,0 +1,21 @@
+<div>
+    <input
+      type="text"
+      class="w-full mb-4 p-2 bg-gray-800 text-white rounded"
+      placeholder="Search evidence..."
+      (input)="onSearch($event)"
+    />
+
+    <label class="block mb-2 text-sm">Status</label>
+    <select class="w-full mb-4 p-2 bg-gray-800 text-white rounded" (change)="onStatusFilter($event)">
+      <option value="">All</option>
+      <option value="tampered">Tampered</option>
+      <option value="verified">Verified</option>
+    </select>
+
+    <label class="block mb-2 text-sm">From:</label>
+    <input type="date" class="w-full mb-4 p-2 bg-gray-800 text-white rounded" />
+
+    <label class="block mb-2 text-sm">To:</label>
+    <input type="date" class="w-full mb-4 p-2 bg-gray-800 text-white rounded" />
+  </div>

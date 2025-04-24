@@ -1,0 +1,12 @@
+<div class="bg-gray-800 p-4 rounded shadow hover:bg-gray-700 cursor-pointer">
+    <img [src]="evidence.thumbnail" alt="thumbnail" class="w-full mb-2 rounded" />
+    <h3 class="text-sm font-semibold truncate">{{ evidence.name }}</h3>
+    <p class="text-xs text-gray-400">{{ evidence.timestamp }}</p>
+    <span
+      class="inline-block mt-1 px-2 py-0.5 rounded text-xs"
+      [ngClass]="{
+        'bg-green-600': evidence.status === 'verified',
+        'bg-red-600': evidence.status === 'tampered'
+      }"
+    >{{ evidence.status }}</span>
+  </div>
